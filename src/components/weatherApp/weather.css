@@ -1,8 +1,10 @@
 .container {
-    margin: auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    display: grid;
     justify-content: center;
+    gap: 1rem;
+    margin: auto;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
     background-color: rgba(0, 0, 0, 0.329);
     width: fit-content;
     padding: 2rem;
@@ -11,6 +13,16 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.336);
 }
 
+.container table {
+    height: auto;
+    width: 100%;
+    max-width: 350px;
+    border: 1px solid white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.322);
+}
 
 .top_bar {
     margin-top: 1rem;
@@ -108,4 +120,37 @@
 
 .text {
     font-size: 1rem;
+}
+
+
+@media (max-width: 768px) {
+
+    .main_box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container table {
+        width: 90%;
+    }
+
+    .search {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .container {
+        margin-top: 6rem;
+        padding-top: 3rem;
+    }
+
+    .container table {
+        width: 100%;
+    }
+
+    .search {
+        width: 100%;
+    }
 }
